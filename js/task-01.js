@@ -1,4 +1,4 @@
-// Шукаємо в DOM список категорій та їх елементів
+// Отримуємо доступ до списку категорій та їх елементів
 const categories = document.querySelector("#categories");
 const items = document.querySelectorAll(".item");
 
