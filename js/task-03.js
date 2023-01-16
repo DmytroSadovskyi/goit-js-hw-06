@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// отримуємо доступ до порожнього списку
+const listOfImages = document.querySelector('.gallery');
+
+// створюємо функцію для розмітки галереї
+
+const makeGalleryMarkup = image => {
+  const { url, alt } = image;
+
+  return `<li class = 'gallery__item'><img src = ${url} alt = ${alt} width = '400' height = '200'></li>`;
+};
+
+const makeGallery = images.map(makeGalleryMarkup).join('');
+
+//  додаємо розмітку в список
+listOfImages.insertAdjacentHTML('afterbegin', makeGallery);
