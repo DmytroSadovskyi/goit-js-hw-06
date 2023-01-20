@@ -7,10 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 
-//  Отримуємо доступ до порожнього списку інгредієнтів
+//  Пошук порожнього списку інгредієнтів
 const listOfIngredients = document.querySelector('#ingredients');
 
-// Створюємо і додаємо до списку інгредієнти на основі масиву
+// Створення і додавання до списку інгредієнтів на основі масиву
 
 ingredients.map(element => {
   const ingredient = document.createElement('li');

@@ -13,10 +13,10 @@ const images = [
   },
 ];
 
-// отримуємо доступ до порожнього списку
-const listOfImages = document.querySelector('.gallery');
+// пошук порожнього списку для майбутньої галереї
+const gallery = document.querySelector('.gallery');
 
-// створюємо функцію для розмітки галереї
+// створення функції для розмітки елементів галереї
 
 const makeGalleryMarkup = image => {
   const { url, alt } = image;
@@ -26,5 +26,5 @@ const makeGalleryMarkup = image => {
 
 const makeGallery = images.map(makeGalleryMarkup).join('');
 
-//  додаємо розмітку в список
-listOfImages.insertAdjacentHTML('afterbegin', makeGallery);
+//  додавання розмітки у галерею
+gallery.insertAdjacentHTML('afterbegin', makeGallery);

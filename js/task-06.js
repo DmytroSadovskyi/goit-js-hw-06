@@ -1,13 +1,9 @@
-//  Отримуємо доступ до інпута
+//  Пошук інпута
 const inputForValidation = document.querySelector('#validation-input');
 
-// створюємо дві змінні для зберігання числового значення необхідної кількості символів і введеної
-const currentValue = inputForValidation.value.length;
-const requiredValue = Number(inputForValidation.dataset.length);
-
-// пишемо колбек-функцію для слухача події blur
+// створення колбек-функції для слухача події blur
 function onInputBlur() {
-  // створюємо дві змінні для зберігання числового значення необхідної кількості символів і введеної
+  // створення двох змінних для зберігання числового значення необхідної кількості символів і введеної
   const currentValue = inputForValidation.value.length;
   const requiredValue = Number(inputForValidation.dataset.length);
 
@@ -18,5 +14,5 @@ function onInputBlur() {
   }
 }
 
-// додаємо слухача події blur(втрати фокусу) для інпута
+// додавання слухача події blur(втрати фокусу) для інпута
 inputForValidation.addEventListener('blur', onInputBlur);
