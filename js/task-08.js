@@ -2,10 +2,10 @@
 const form = document.querySelector('.login-form');
 
 // Додавання слухача події submit для форми
-form.addEventListener('submit', onButtonSubmit);
+form.addEventListener('submit', onFormSubmit);
 
 //  Створення колбек-функції для слухача події
-function onButtonSubmit(event) {
+function onFormSubmit(event) {
   event.preventDefault();
 
   const {
