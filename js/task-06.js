@@ -8,9 +8,19 @@ function onInputBlur() {
   const requiredValue = Number(inputForValidation.dataset.length);
 
   if (currentValue !== requiredValue) {
+    // додавання класу, якщо значення не валідне
     inputForValidation.classList.add('invalid');
+    //  якщо клас для валідного значення вже є, то прибираємо його
+    if (inputForValidation.classList.contains('valid')) {
+      inputForValidation.classList.remove('valid');
+    }
   } else {
-    inputForValidation.classList.replace('invalid', 'valid');
+    //  якщо клас для не валідного значення вже є, то прибираємо його
+    if (inputForValidation.classList.contains('invalid')) {
+      inputForValidation.classList.remove('invalid');
+    }
+    // встановлюємо клас для валідного значення
+    inputForValidation.classList.add('valid');
   }
 }
 
