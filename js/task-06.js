@@ -11,14 +11,10 @@ function onInputBlur() {
     // додавання класу, якщо значення не валідне
     inputForValidation.classList.add('invalid');
     //  якщо клас для валідного значення вже є, то прибираємо його
-    if (inputForValidation.classList.contains('valid')) {
-      inputForValidation.classList.remove('valid');
-    }
+    inputForValidation.classList.remove('valid');
   } else {
     //  якщо клас для не валідного значення вже є, то прибираємо його
-    if (inputForValidation.classList.contains('invalid')) {
-      inputForValidation.classList.remove('invalid');
-    }
+    inputForValidation.classList.remove('invalid');
     // встановлюємо клас для валідного значення
     inputForValidation.classList.add('valid');
   }
